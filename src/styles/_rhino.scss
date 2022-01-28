@@ -1,0 +1,82 @@
+
+// Mixins
+// ********************
+@mixin mq($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+// Vars
+// ********************
+$bgd-color: #eee;
+$font-default: 'Source Sans Pro', sans-serif;
+$font-headers: 'Playfair Display', cursive;
+
+//font-family: 'Abril Fatface', cursive;
+//font-family: 'Playfair Display', serif;
+//font-family: 'Source Sans Pro', sans-serif;
+
+// Typography
+// ********************
+html {
+  font-family: $font-default;
+  line-height: 1.5;
+}
+body {
+  font-size: 1.25rem;
+  color: hsl(110,0%,90%);
+}
+strong {
+  font-weight: 600;
+}
+h1 {
+  font-family: $font-headers;
+  font-weight: normal;
+  font-size: 4.8rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: hsl(110,50%,2%);
+  @include mq(40em) {
+    font-size: 3.2rem;
+  }
+}
+p {
+  margin-top: .8rem;
+}
+a {
+
+  text-decoration: underline;
+}
+
+
+// Scaffold
+// ********************
+body {
+  background-color: $bgd-color;
+}
+main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background: url('../images/IMG_5376.jpg') no-repeat center;
+  background-size: cover;
+}
+
+// Classes
+// *******************
+.content-container {
+  max-width: 640px;
+  border-radius: 20px;
+  margin: 2.4rem;
+  padding: 2.4rem ;
+  backdrop-filter: blur(10px);
+  background-color: hsla(190,50%,10%,0.3);
+  @include mq(40em) {
+    margin: 0;
+    border-radius: 0;
+  }
+}

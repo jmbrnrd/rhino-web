@@ -1,7 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 
 module.exports = {
   // main bundle/dependency graph
@@ -11,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
-    assetModuleFilename: '[name][ext]',
+    assetModuleFilename: 'assets/[name][ext]',
     clean: true
   },
   devtool: 'inline-source-map',
@@ -55,7 +53,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // create our index.html from a template
     new HtmlWebpackPlugin({
       title: "Rhino Software Inc.",
       filename: 'index.html',
