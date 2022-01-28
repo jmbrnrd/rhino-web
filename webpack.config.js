@@ -59,4 +59,7 @@ module.exports = {
       template: path.resolve(__dirname, './src/template.html')
     })
   ],
+  performance: {
+    maxAssetSize: 500000
+  }
 }
