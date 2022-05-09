@@ -45,7 +45,6 @@ p {
   margin-top: .8rem;
 }
 a {
-
   text-decoration: underline;
 }
 
@@ -61,7 +60,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   background: url('../images/IMG_5376.jpg') no-repeat center;
   background-size: cover;
 }
